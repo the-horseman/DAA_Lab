@@ -1,2 +1,0 @@
-# DAA_Lab
-submission
