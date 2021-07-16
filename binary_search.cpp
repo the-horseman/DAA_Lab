@@ -37,9 +37,9 @@ int main()
         val = 0;
         int ind = Binary_Search(arr, 0, n - 1, k);
         if (ind == -1)
-            cout << "Not Present " << n << endl;
+            cout << "Not Present " << n << "\nNumber of Operations " << val << endl;
         else
-            cout << "Present " << ind + 1 << endl;
+            cout << "Present " << ind + 1 << "\nNumber of Operations " << val << endl;
     }
 
     return 0;
