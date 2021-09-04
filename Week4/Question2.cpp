@@ -31,7 +31,7 @@ int main()
         {
             int x = (k - arr[i]);
             int ind = lower_bound(arr + i + 1, arr + n, x) - arr;
-            if (arr[ind] == x)
+            if (ind < n && arr[ind] == x)
                 v.push_back(make_pair(arr[i], x));
         }
         if (v.size() > 0)
