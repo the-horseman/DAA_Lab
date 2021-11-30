@@ -104,7 +104,7 @@ int main()
 				visit[val] = 1;
 				for(int i=0 ; i<n ; ++i)
 				{
-					if (visit[i] == 0 && gra[val][i] != 0 && weight[i]>(gra[val][i]+wt))
+					if (visit[i] == 0 && gra[val][i] != 0 && weight[i]>(gra[val][i]+weight[val]))
 					{
 						weight[i]=gra[val][i]+wt;
 						mpq.push(mp(weight[i],i));
