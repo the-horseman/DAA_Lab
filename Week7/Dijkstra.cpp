@@ -106,7 +106,7 @@ int main()
 				{
 					if (visit[i] == 0 && gra[val][i] != 0 && weight[i]>(gra[val][i]+weight[val]))
 					{
-						weight[i]=gra[val][i]+wt;
+						weight[i]=gra[val][i]+weight[val];
 						mpq.push(mp(weight[i],i));
 						parent[i] = val;
 					}
