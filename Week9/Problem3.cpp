@@ -70,25 +70,26 @@ int main()
 	for (int f = 0; f < no; f++)
 	{
 		int n;
-		cin>>n;
-		vi arr(n);
-		for(int i=0 ; i<n ; ++i)
-			cin>>arr[i];
-		sortall(arr);
-		int ans = arr[0];
-		vi ext;
-		for(int i=1 ; i<n ; ++i)
+    		cin >> n;
+    		vector<int> arr(n);
+    		int mn = INT_MAX;
+    		priority_queue<int, vector<int>, greater<int>> q;
+    		for(int i=0;i<n;i++)
 		{
-			ans += arr[i];
-			ext.pb(ans);
-		}
-		debug(ext);
-		ans=0;
-		for(auto x : ext)
+        		cin >> arr[i];
+        		q.push(arr[i]);
+    		}
+    		int ans = 0;
+    		while(q.size() != 1)
 		{
-			ans += x;
-		}
-		cout<<ans<<endl;
+        		int a = q.top();
+        		q.pop();
+        		int b = q.top();
+        		q.pop();
+   		     	ans += a+b;
+        		q.push(a+b);
+    		}
+    		cout << ans << endl;
 	}
 	
 	return 0;
